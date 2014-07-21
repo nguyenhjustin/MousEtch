@@ -1,0 +1,29 @@
+#newGridButton {
+	margin: 10px;
+	position: fixed;
+}
+
+.row {
+	clear: both;
+}
+
+#container {
+	margin: auto;
+	padding: 5px;
+}
+
+.box {
+	background-color: white;
+	border: 1px solid black;
+	margin: 1px;
+	float: left;
+	vertical-align: top;
+}
+
+.painted {
+	background-color: cyan;
+	border: 1px solid black;
+	margin: 1px;
+	float: left;
+	vertical-align: top;
+}
