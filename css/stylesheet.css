@@ -1,6 +1,22 @@
+h1 {
+	font-size: 3em;
+}
+
+#header {
+	text-align: center;
+	position: relative;
+}
+
 #newGridButton {
-	margin: 10px;
-	position: fixed;
+	margin: 5px;
+}
+
+#clearButton {
+	margin: 5px;
+}
+
+#selectColorButton {
+	margin: 5px;
 }
 
 .row {

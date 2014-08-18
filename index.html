@@ -9,7 +9,23 @@
 	</head>
 
 	<body>
-		<button id="newGridButton" onclick="newGrid(); return false;">New Grid</button>
+		<div id="header">
+			<h1>MousEtch</h1>
+
+			<button id="newGridButton">New Grid</button>
+			<button id="clearButton">Clear Grid</button>
+
+			<select id="selectColorButton" name="color">
+				<option value="paintRed">Red</option>
+				<option value="paintOrange">Orange</option>
+				<option value="paintYellow">Yellow</option>
+				<option value="paintGreen">Green</option>
+				<option value="paintBlue">Blue</option>
+				<option value="paintPurple">Purple</option>
+				<option value="random">Mystery!</option>
+			</select>
+		</div>
+
 		<div id="container"></div>
 	</body>
 </html>
