@@ -48,32 +48,27 @@ $(document).ready(function() {
 });
 
 function createGrid() {
-	gridBox = ( containerSize - (gridCol*2*2) ) / gridCol;
 	$("#container").append('<div id="grid"></div>');
 
-	// Create the grid in O(i*j)?
-	// for (var i = 0; i < gridRow; i++) {
-	// 	$("#grid").append('<div class="row"></div>');
-
-	// 	for (var j = 0; j < gridCol; j++) {
-	// 		var num = i+1;
-	// 		$(".row:nth-child(" + num + ")").append('<div class="box"></div>');
-	// 	}
-	// }
-
-	// Create the grid in O(i+j)?
-	$("#grid").append('<div class="row"></div>');
-	var $row = $(".row");
-
-	for (var j = 0; j < gridCol; j++) {
-		$(".row:nth-child(1)").append('<div class="box"></div>');
+	// Create the grids in a row
+	var grid = new Array();
+	grid[0] = '<div class="row">';
+	var r = 1;
+	for (var i = 0; i < gridCol; i++, r++) {
+		grid[r] = '<div class="box"></div>';
 	}
+	grid[r] = "</div>";
+	r++;
 
-	for (var i = 1; i < gridRow; i++) {
-		$("#grid").append($row.clone());
+	// Create the rows of the grid
+	var rowString = grid.join('');
+	for (var i = 0; i < gridRow; i++, r++) {
+		grid[r] = rowString;
 	}
+	$("#grid").append(grid.join(''));
 
 	// Initialize each square's CSS properties
+	gridBox = ( containerSize - (gridCol*2*2) ) / gridCol;
 	$(".box").width(gridBox + "px");
 	$(".box").height(gridBox + "px");
 }
